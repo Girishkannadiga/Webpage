@@ -1,0 +1,206 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://ait-tumkur.ac.in/wp-content/uploads/2023/08/IMG_20190605_194333.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.chat-container {
+    width: 65%;
+    max-width: 900px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.chat-header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    padding: 12px 18px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+}
+
+.user-msg {
+    background: #0066cc;
+    color: #fff;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+    animation: fadeInRight 0.5s ease-out;
+}
+
+.bot-msg {
+    background: #e6f7ff;
+    color: #004080;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    animation: fadeInLeft 0.5s ease-out;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: #f0f4f8;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-container input:focus {
+    background-color: #e6f7ff;
+    border: 2px solid #0066cc;
+}
+
+.input-container button {
+    background-color: #33ccff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 14px 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.input-container button:hover {
+    background-color: #0099cc;
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.voice-button {
+    background-color: #ff8c00;
+}
+
+.voice-button:hover {
+    background-color: #e07b00;
+    opacity: 0.8;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+    display: none;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0066cc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.button-group button {
+    padding: 12px 22px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: none;
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.button-group button:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
