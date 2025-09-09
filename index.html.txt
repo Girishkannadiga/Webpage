@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSE DEPARTMENT CHAT BOT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">CSE DEPARTMENT CHAT BOT</div>
+    <img src="https://universitykart.b-cdn.net/Content/upload/admin/mvo2ykdo.wr3.png" alt="Chatbot Logo" class="logo">
+    <div class="chat-box" id="chat-box"></div>
+    <div class="loading" id="loading">
+        <div class="spinner"></div> Bot is thinking...
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="user-input" placeholder="Ask me anything about CSE department..." onkeydown="checkEnter(event)" />
+        <button onclick="sendMessage()">Send</button>
+        <button class="voice-button" onclick="startSpeechRecognition()">Hold to Speak</button>
+    </div>
+
+    <div class="button-group">
+        <button onclick="showHelp()">Help</button>
+        <button onclick="clearChat()">Clear Chat</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
